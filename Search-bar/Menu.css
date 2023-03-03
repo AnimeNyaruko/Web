@@ -53,8 +53,9 @@
 }
 
 #phone_menu #X {
-    position: relative;
-    
+    position: absolute;
+    right: 0%;
+    top: 0%;
     float: right;
     transform: scale(0.2);
 }
