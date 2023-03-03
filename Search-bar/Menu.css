@@ -57,11 +57,17 @@
 
 #phone_menu #X {
     position:absolute;
-    width: 100px;
-    height: 100px;
-    transform: scale(0.5);
+    width: 40px;
+    height: 40px;
+    top: 2%;
+    left: 2%;
     /* background: white; */
 }
+
+#phone_menu #X svg path{
+    transform: scale(2.5);
+}
+
 
 .P {
     position: relative;
