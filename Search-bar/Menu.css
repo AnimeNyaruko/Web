@@ -34,6 +34,9 @@
 }
 
 #phone_menu{
+    display: none;
+    width: 100%;
+    height: 100%;
     background: #004D6E;
     position: absolute;
     filter: blur(2px);
@@ -53,11 +56,11 @@
 }
 
 #phone_menu #X {
-    position: absolute;
-    right: 0%;
-    top: 0%;
-    float: right;
-    transform: scale(0.2);
+    position:absolute;
+    width: 100px;
+    height: 100px;
+    transform: scale(0.5);
+    /* background: white; */
 }
 
 .P {
