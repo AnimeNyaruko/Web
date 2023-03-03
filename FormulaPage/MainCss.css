@@ -1,0 +1,110 @@
+body {
+    background-color: #FFD8BE;
+    display: block;
+}
+
+#ViewerContainer {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    transform-style: preserve-3d;
+    background: white;
+    border-radius: 30px;
+}
+
+#FName{
+    position: absolute;
+    width: 100%;
+    height: 70px;
+    background: black;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#FName p{
+    position: absolute;
+    color: white;
+    font-size:50px;
+}
+
+nav {
+    margin-top: 25px;
+    position: relative;
+    width: 100%;
+    height: 75px;
+    /* background: black; */
+}
+
+nav #Search{
+    width: 30%;
+    height: 75%;
+    border-radius: 40px;
+    outline: none;
+    border-style: solid;
+    border-width: 5px;
+    position: absolute;
+    top: 50%;
+    left: 2%;
+    transform: translateY(-50%);
+    border-color:aquamarine;
+    padding-left: 20px;
+    font-size: 100%;
+}
+
+nav #SelectionMenu{
+    position: absolute;
+    right: 0%;
+    top: 50%;
+    transform:translateY(-50%);
+    width: 5%;
+    height: 100%;
+    /* background: white; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    cursor:pointer;
+}
+
+nav #SelectionMenu div{
+    width: 100%;
+    height: 15.5%;
+    background: black;
+}
+
+article article p{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size:xx-large;
+}
+
+aside {
+    display: flex;
+    /* opacity: 0; */
+    position: fixed;
+    box-sizing:border-box;
+    right: 0%;
+    width: 20%;
+    height: 90%;
+    background: #e7e9eb;
+    transition: opacity 0.25s;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+aside .Alphabet{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
