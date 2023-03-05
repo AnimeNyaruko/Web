@@ -6,10 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="MainCss.css">
     <title>Document</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
     <nav>
         <input type="text" id="Search" placeholder="Search for Formula Name 🔎">
+        <svg id="DeleteText" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="15" y1="9" x2="9" y2="15"/>
+            <line x1="9" y1="9" x2="15" y2="15"/>
+        </svg>
         <div id="SelectionMenu">
             <div id="path1"></div>
             <div id="path2"></div>
@@ -21,41 +28,45 @@
             <p>Formula Text</p>
         </header>
         <article >
-            <p id="FView">For testing</p>
+            <input type="text" id="WritingF" placeholder="Write Formula here">
+            <p id="FView">\(getinput\)</p>
         </article>
     </article>
     <aside id="FMenu">
-        <h3 class="Alphabet">A</h3>
-        <h3 class="Alphabet">B</h3>
-        <h3 class="Alphabet">C</h3>
-        <h3 class="Alphabet">D</h3>
-        <h3 class="Alphabet">E</h3>
-        <h3 class="Alphabet">F</h3>
-        <h3 class="Alphabet">G</h3>
-        <h3 class="Alphabet">H</h3>
-        <h3 class="Alphabet">I</h3>
-        <h3 class="Alphabet">J</h3>
-        <h3 class="Alphabet">K</h3>
-        <h3 class="Alphabet">L</h3>
-        <h3 class="Alphabet">M</h3>
-        <h3 class="Alphabet">N</h3>
-        <h3 class="Alphabet">O</h3>
-        <h3 class="Alphabet">P</h3>
-        <h3 class="Alphabet">Q</h3>
-        <h3 class="Alphabet">R</h3>
-        <h3 class="Alphabet">S</h3>
-        <h3 class="Alphabet">T</h3>
-        <h3 class="Alphabet">U</h3>
-        <h3 class="Alphabet">V</h3>
-        <h3 class="Alphabet">W</h3>
-        <h3 class="Alphabet">X</h3>
-        <h3 class="Alphabet">Y</h3>
-        <h3 class="Alphabet">Z</h3>
-        <h3 class="Alphabet">*</h3>
+
+        <h3 class="Alphabet" id="A">A</h3>
+        <h3 class="Alphabet" id="B">B</h3>
+        <h3 class="Alphabet" id="C">C</h3>
+        <h3 class="Alphabet" id="D">D</h3>
+        <h3 class="Alphabet" id="E">E</h3>
+        <h3 class="Alphabet" id="F">F</h3>
+        <h3 class="Alphabet" id="G">G</h3>
+        <h3 class="Alphabet" id="H">H</h3>
+        <h3 class="Alphabet" id="I">I</h3>
+        <h3 class="Alphabet" id="J">J</h3>
+        <h3 class="Alphabet" id="K">K</h3>
+        <h3 class="Alphabet" id="L">L</h3>
+        <h3 class="Alphabet" id="M">M</h3>
+        <h3 class="Alphabet" id="N">N</h3>
+        <h3 class="Alphabet" id="O">O</h3>
+        <h3 class="Alphabet" id="P">P</h3>
+        <h3 class="Alphabet" id="Q">Q</h3>
+        <h3 class="Alphabet" id="R">R</h3>
+        <h3 class="Alphabet" id="S">S</h3>
+        <h3 class="Alphabet" id="T">T</h3>
+        <h3 class="Alphabet" id="U">U</h3>
+        <h3 class="Alphabet" id="V">V</h3>
+        <h3 class="Alphabet" id="W">W</h3>
+        <h3 class="Alphabet" id="X">X</h3>
+        <h3 class="Alphabet" id="Y">Y</h3>
+        <h3 class="Alphabet" id="Z">Z</h3>
+        <h3 class="Alphabet" id="*">*</h3>
         <h3 id="AddFormula">Tạo hàm riêng của bạn</h3>
         <script src="FMenuScript/FMenu.js"></script>
     </aside>
     
     <script src="Mainjs.js"></script>
+    <script src="FormulaWriting.js"></script>
+    <script src="SearchUI.js"></script>
 </body>
 </html>

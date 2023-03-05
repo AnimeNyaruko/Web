@@ -5,10 +5,6 @@ var menu = document.getElementById('menu');
 var phone_menu = document.getElementById('phone_menu');
 var X = document.getElementById("X");
 
-phone_menu.style.display = "none";
-phone_menu.style.height = "100%";
-phone_menu.style.width = "100%";
-
 if (window.matchMedia("(max-width: 1280px)").matches){
 
     function onMenuClick() {
