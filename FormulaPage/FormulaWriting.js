@@ -1,4 +1,6 @@
 var inputF = document.getElementById("WritingF");
+inputF.focus();
+
 
 var FViewer = document.getElementById("FView");
 
@@ -12,28 +14,30 @@ function typeset(code) {
   return promise;
 }
 
-// var promise = new Promise(onWriting);
-
 function onWriting(event){
-    loops = setInterval(()=>{
-        if(inputF.value != "" && event.data !== "\\"){
-
-
+    var word = String(event.data);
+    // console.log(word);
+    if(word.includes(String.fromCharCode(92)) == false)
+        if(inputF.value != ""){
             //Converting input value to string
             var temp = inputF.value;
-            temp = String(temp);
+            temp = String(temp);    
 
             //Output input value
             var text = "$$"+temp+"$$";
             FViewer.innerHTML = text;
-            MathJax.typesetPromise();
+            MathJax.typesetPromise().catch((error)=>{
+                console.log("error occured");
+                window.location.reload();
+            });
         }
-    },2500);
+        else FViewer.innerHTML = "";
 }
 
-function doneWriting(){
+function doneWriting(event){
+    console.log(event);
     clearInterval(loops);
 }
 
-inputF.addEventListener("focus",onWriting);
+inputF.addEventListener("input",onWriting);
 inputF.addEventListener("blur",doneWriting);
